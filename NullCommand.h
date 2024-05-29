@@ -8,12 +8,13 @@
 #include "Command.h"
 #include <iostream>
 
-class NullCommand : public Command {
+class NullCommand : public Command
+{
 public:
     NullCommand() : Command(nullptr) {}
 
     void execute() override;
 };
 
-
-#endif //ZOORK_NULLCOMMAND_H
+#include "NullCommand.cpp"
+#endif // ZOORK_NULLCOMMAND_H

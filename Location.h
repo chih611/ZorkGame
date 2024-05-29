@@ -9,7 +9,8 @@
 #include "GameObject.h"
 #include "NullCommand.h"
 
-class Location : public GameObject {
+class Location : public GameObject
+{
 public:
     Location(const std::string &, const std::string &);
 
@@ -22,5 +23,5 @@ public:
 protected:
     std::shared_ptr<Command> enterCommand;
 };
-
-#endif //ZOORK_LOCATION_H
+#include "Location.cpp"
+#endif // ZOORK_LOCATION_H

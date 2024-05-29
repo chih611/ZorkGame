@@ -9,12 +9,14 @@ Location::Location(const std::string &n, const std::string &d) : GameObject(n, d
 
 Location::Location(const std::string &n, const std::string &d, std::shared_ptr<Command> c) : GameObject(n, d),
                                                                                              enterCommand(
-                                                                                                     std::move(c)) {}
+                                                                                                 std::move(c)) {}
 
-void Location::enter() {
+void Location::enter()
+{
     enterCommand->execute();
 }
 
-void Location::setEnterCommand(std::shared_ptr<Command> c) {
+void Location::setEnterCommand(std::shared_ptr<Command> c)
+{
     enterCommand = std::move(c);
 }

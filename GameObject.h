@@ -7,7 +7,8 @@
 
 #include <string>
 
-class GameObject {
+class GameObject
+{
 public:
     GameObject(const std::string &, const std::string &);
 
@@ -24,5 +25,5 @@ protected:
     std::string description;
 };
 
-
-#endif //ZOORK_GAMEOBJECT_H
+#include "GameObject.cpp"
+#endif // ZOORK_GAMEOBJECT_H

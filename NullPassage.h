@@ -6,11 +6,10 @@
 #define ZOORK_NULLPASSAGE_H
 
 #include "Passage.h"
-
-class NullPassage : public Passage {
+#include "Passage.cpp"
+class NullPassage : public Passage
+{
 public:
-    explicit NullPassage(Room*);
+    explicit NullPassage(Room *);
 };
-
-
-#endif //ZOORK_NULLPASSAGE_H
+#endif // ZOORK_NULLPASSAGE_H
