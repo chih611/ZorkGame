@@ -7,21 +7,24 @@
 
 #include "Character.h"
 #include "Location.h"
-#include "NullRoom.h"
+// #include "NullRoom.h"
 
-class Player : public Character {
+class Player : public Character
+{
 public:
-    static Player *instance() {
+    static Player *instance()
+    {
         // Note: lazy instantiation of the singleton Player object
-        if (!playerInstance) {
-            playerInstance = new Player();
+        if (!playerInstance)
+        {
+            // playerInstance = new Player();
         }
         return Player::playerInstance;
     }
 
-    void setCurrentRoom(Room*);
+    void setCurrentRoom(Room *);
 
-    Room* getCurrentRoom() const;
+    Room *getCurrentRoom() const;
 
     Player(const Player &) = delete;
 
@@ -29,10 +32,10 @@ public:
 
 private:
     static Player *playerInstance;
-    Room* currentRoom;
+    Room *currentRoom;
 
-    Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),
-               currentRoom(new NullRoom()) {}
+    // Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),
+    //            currentRoom(new NullRoom()) {}
 };
-
-#endif //ZOORK_PLAYER_H
+#include "Player.cpp"
+#endif // ZOORK_PLAYER_H

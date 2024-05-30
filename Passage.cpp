@@ -1,7 +1,3 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #include "Passage.h"
 #include <string>
 #include <utility>
@@ -28,7 +24,7 @@ std::string Passage::oppositeDirection(const std::string &s)
     else
         return "unknown_direction";
 }
-/*
+
 void Passage::createBasicPassage(Room *from, Room *to,
                                  const std::string &direction, bool bidirectional = true)
 {
@@ -42,16 +38,16 @@ void Passage::createBasicPassage(Room *from, Room *to,
         to->addPassage(oppositeDirection(direction), temp2);
     }
 }
-*/
+
 Passage::Passage(const std::string &n, const std::string &d, Room *from, Room *to)
     : Location(n, d), fromRoom(from), toRoom(to)
 {
     setEnterCommand(std::make_shared<PassageDefaultEnterCommand>(this));
 }
 
-Passage::Passage(const std::string &n, const std::string &d, std::shared_ptr<Command> c, Room *from,
-                 Room *to)
-    : Location(n, d, std::move(c)), fromRoom(from), toRoom(to) {}
+// Passage::Passage(const std::string &n, const std::string &d, std::shared_ptr<Command> c, Room *from,
+//                  Room *to)
+//     : Location(n, d, std::move(c)), fromRoom(from), toRoom(to) {}
 
 // void Passage::setFrom(Room *r)
 // {
@@ -68,7 +64,11 @@ Passage::Passage(const std::string &n, const std::string &d, std::shared_ptr<Com
 //     toRoom = r;
 // }
 
-// Room *Passage::getTo() const
-// {
-//     return toRoom;
-// }
+Room *Passage::getTo() const
+{
+    return toRoom;
+}
+bool Passage::contains(const std::string &direction)
+{
+    return true;
+}

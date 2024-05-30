@@ -7,12 +7,13 @@
 
 #include "Command.h"
 
-class RoomDefaultEnterCommand : public Command {
+class RoomDefaultEnterCommand : public Command
+{
 public:
-    explicit RoomDefaultEnterCommand(GameObject* g) : Command(g) {}
+    explicit RoomDefaultEnterCommand(GameObject *g) : Command(g) {}
 
     void execute() override;
 };
 
-
-#endif //ZOORK_ROOMDEFAULTENTERCOMMAND_H
+#include "RoomDefaultEnterCommand.cpp"
+#endif // ZOORK_ROOMDEFAULTENTERCOMMAND_H

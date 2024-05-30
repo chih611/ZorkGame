@@ -1,7 +1,3 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #ifndef ZOORK_PASSAGE_H
 #define ZOORK_PASSAGE_H
 
@@ -12,11 +8,11 @@
 class Passage : public Location
 {
 public:
-    // static void createBasicPassage(Room *, Room *, const std::string &, bool);
+    static void createBasicPassage(Room *, Room *, const std::string &, bool);
 
     Passage(const std::string &, const std::string &, Room *, Room *);
 
-    Passage(const std::string &, const std::string &, std::shared_ptr<Command>, Room *, Room *);
+    // Passage(const std::string &, const std::string &, std::shared_ptr<Command>, Room *, Room *);
 
     // void setFrom(Room*);
 
@@ -24,7 +20,9 @@ public:
 
     // void setTo(Room*);
 
-    // Room* getTo() const;
+    Room *getTo() const;
+
+    bool contains(const std::string &direction);
 
 protected:
     static std::string oppositeDirection(const std::string &);
@@ -32,5 +30,5 @@ protected:
     Room *fromRoom;
     Room *toRoom;
 };
-
+#include "Passage.cpp"
 #endif // ZOORK_PASSAGE_H

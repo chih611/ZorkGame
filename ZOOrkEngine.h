@@ -13,7 +13,8 @@
 #include <string>
 #include <vector>
 
-class ZOOrkEngine {
+class ZOOrkEngine
+{
 public:
     ZOOrkEngine(std::shared_ptr<Room>);
 
@@ -33,10 +34,10 @@ private:
 
     void handleQuitCommand(std::vector<std::string>);
 
-    static std::vector<std::string> tokenizeString(const std::string&);
+    static std::vector<std::string> tokenizeString(const std::string &);
 
     static std::string makeLowercase(std::string);
 };
 
-
-#endif //ZOORK_ZOORKENGINE_H
+#include "ZOOrkEngine.cpp"
+#endif // ZOORK_ZOORKENGINE_H

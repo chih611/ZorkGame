@@ -6,11 +6,13 @@
 #define ZOORK_NULLROOM_H
 
 #include "Room.h"
+#include "NullCommand.h"
 
-class NullRoom : public Room {
+class NullRoom : public Room
+{
 public:
-    NullRoom();
+    NullRoom(const std::string, const std::string, const NullCommand &);
 };
 
-
-#endif //ZOORK_NULLROOM_H
+#include "NullRoom.cpp"
+#endif // ZOORK_NULLROOM_H
