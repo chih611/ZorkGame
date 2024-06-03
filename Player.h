@@ -17,7 +17,7 @@ public:
         // Note: lazy instantiation of the singleton Player object
         if (!playerInstance)
         {
-            // playerInstance = new Player();
+            playerInstance = new Player();
         }
         return Player::playerInstance;
     }
@@ -33,9 +33,8 @@ public:
 private:
     static Player *playerInstance;
     Room *currentRoom;
-
-    // Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),
-    //            currentRoom(new NullRoom()) {}
+    Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),
+               currentRoom(currentRoom) {}
 };
 #include "Player.cpp"
 #endif // ZOORK_PLAYER_H

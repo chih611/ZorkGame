@@ -11,9 +11,12 @@
 class NullCommand : public Command
 {
 public:
-    NullCommand() : Command(nullptr) {}
+    NullCommand(const std::string &d) : Command(nullptr), description(d) {}
 
     void execute() override;
+
+private:
+    std::string description;
 };
 
 #include "NullCommand.cpp"

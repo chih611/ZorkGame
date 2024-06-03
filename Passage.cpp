@@ -68,7 +68,7 @@ Room *Passage::getTo() const
 {
     return toRoom;
 }
-bool Passage::contains(const std::string &direction)
-{
-    return true;
-}
+// bool Passage::contains(const std::string &direction)
+// {
+//     return true;
+// }

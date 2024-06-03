@@ -1,0 +1,86 @@
+[
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\main.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\main.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\main.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\Item.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\Item.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Item.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Item.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\Item.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\Character.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\Character.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Character.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Character.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\Character.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\Location.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\Location.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Location.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Location.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\Location.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\GameObject.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\GameObject.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\GameObject.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\GameObject.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\GameObject.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\Room.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\Room.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Room.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Room.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\Room.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\Passage.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\Passage.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Passage.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Passage.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\Passage.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\NullRoom.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\NullRoom.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\NullRoom.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\NullRoom.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\NullRoom.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\NullCommand.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\NullCommand.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\NullCommand.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\NullCommand.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\NullCommand.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\Player.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\Player.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Player.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\Player.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\Player.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\RoomDefaultEnterCommand.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\RoomDefaultEnterCommand.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\RoomDefaultEnterCommand.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\RoomDefaultEnterCommand.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\RoomDefaultEnterCommand.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\ZOOrkEngine.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\ZOOrkEngine.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\ZOOrkEngine.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\ZOOrkEngine.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\ZOOrkEngine.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\PassageDefaultEnterCommand.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\PassageDefaultEnterCommand.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\PassageDefaultEnterCommand.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\PassageDefaultEnterCommand.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\PassageDefaultEnterCommand.cpp.obj"
+},
+{
+  "directory": "C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1439~1.335\\bin\\Hostx86\\x86\\cl.exe  /nologo /TP /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++20 -MDd @CMakeFiles\\ZOOrk.dir\\NullPassage.cpp.obj.modmap /FoCMakeFiles\\ZOOrk.dir\\NullPassage.cpp.obj /FdTARGET_COMPILE_PDB /FS -c \"C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\NullPassage.cpp\"",
+  "file": "C:\\Users\\Hao Thai\\Desktop\\CSE3PSD\\ZOOrk-20240527\\ZOOrk\\NullPassage.cpp",
+  "output": "CMakeFiles\\ZOOrk.dir\\NullPassage.cpp.obj"
+}
+]

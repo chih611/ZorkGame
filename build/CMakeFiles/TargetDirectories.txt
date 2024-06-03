@@ -1,0 +1,3 @@
+C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build/CMakeFiles/ZOOrk.dir
+C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build/CMakeFiles/edit_cache.dir
+C:/Users/Hao Thai/Desktop/CSE3PSD/ZOOrk-20240527/ZOOrk/build/CMakeFiles/rebuild_cache.dir

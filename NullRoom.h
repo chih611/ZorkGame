@@ -1,7 +1,3 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #ifndef ZOORK_NULLROOM_H
 #define ZOORK_NULLROOM_H
 
@@ -11,7 +7,8 @@
 class NullRoom : public Room
 {
 public:
-    NullRoom(const std::string, const std::string, const NullCommand &);
+    // NullRoom(const std::string, const std::string, const NullCommand &);
+    NullRoom();
 };
 
 #include "NullRoom.cpp"

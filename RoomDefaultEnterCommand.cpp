@@ -4,6 +4,7 @@
 
 #include "RoomDefaultEnterCommand.h"
 
-void RoomDefaultEnterCommand::execute() {
+void RoomDefaultEnterCommand::execute()
+{
     std::cout << gameObject->getDescription() << "\n";
 }

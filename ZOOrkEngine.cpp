@@ -1,7 +1,3 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #include "ZOOrkEngine.h"
 
 #include <utility>
@@ -9,8 +5,10 @@
 ZOOrkEngine::ZOOrkEngine(std::shared_ptr<Room> start)
 {
     player = Player::instance();
+
     player->setCurrentRoom(start.get());
-    player->getCurrentRoom()->enter();
+    Room *temp = player->getCurrentRoom();
+    temp->enter();
 }
 
 void ZOOrkEngine::run()

@@ -22,7 +22,7 @@ public:
 
     Room *getTo() const;
 
-    bool contains(const std::string &direction);
+    // bool contains(const std::string &direction);
 
 protected:
     static std::string oppositeDirection(const std::string &);

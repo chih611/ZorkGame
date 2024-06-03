@@ -1,4 +1,3 @@
-
 #include "NullPassage.h"
-
-NullPassage::NullPassage(Room *from) : Passage("null", "Time is a flat circle.", from, from) {}
+#include "Room.h"
+NullPassage::NullPassage(Room *from) {}

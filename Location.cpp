@@ -1,15 +1,11 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #include "Location.h"
 
 Location::Location(const std::string &n, const std::string &d) : GameObject(n, d),
-                                                                 enterCommand(std::make_shared<NullCommand>()) {}
+                                                                 enterCommand(std::make_shared<NullCommand>(d)) {}
 
-Location::Location(const std::string &n, const std::string &d, std::shared_ptr<Command> c) : GameObject(n, d),
-                                                                                             enterCommand(
-                                                                                                 std::move(c)) {}
+Location::Location(const std::string &n, const std::string &d, std::shared_ptr<RoomDefaultEnterCommand> c) : GameObject(n, d),
+                                                                                                             enterCommand(
+                                                                                                                 std::move(c)) {}
 
 void Location::enter()
 {

@@ -14,7 +14,7 @@ class Location : public GameObject
 public:
     Location(const std::string &, const std::string &);
 
-    Location(const std::string &, const std::string &, std::shared_ptr<Command>);
+    Location(const std::string &, const std::string &, std::shared_ptr<RoomDefaultEnterCommand>);
 
     virtual void enter();
 

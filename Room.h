@@ -9,13 +9,13 @@
 #include <string>
 
 class Passage;
-
+class NullPassage;
 class Room : public Location
 {
 public:
     Room(const std::string &, const std::string &);
 
-    // Room(const std::string &, const std::string &, std::shared_ptr<Command>);
+    Room(const std::string &, const std::string &, std::shared_ptr<RoomDefaultEnterCommand>);
 
     //    void addItem(Item*);
     //    void removeItem(const std::string&);
@@ -31,9 +31,11 @@ public:
 
     std::shared_ptr<Passage> getPassage(const std::string &);
 
+    // std::shared_ptr<NullPassage> getNullPassage(const std::string &);
+
 protected:
-    //    std::vector<Item*> items;
-    //    std::vector<Character*> characters;
+    std::vector<Item *> items;
+    std::vector<Character *> characters;
     std::map<std::string, std::shared_ptr<Passage>> passageMap;
 };
 #include "Room.cpp"
