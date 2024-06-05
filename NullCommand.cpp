@@ -2,6 +2,6 @@
 
 void NullCommand::execute()
 {
-    std::cout << "Welcome to ZORK.\n";
+    std::cout << "\033[1mWelcome to ZORK.\033[0m\n";
     std::cout << description;
 }

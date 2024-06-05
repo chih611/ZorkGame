@@ -1,5 +1,5 @@
 #include "ZOOrkEngine.h"
-
+#include "NullPassage.h"
 #include <utility>
 
 ZOOrkEngine::ZOOrkEngine(std::shared_ptr<Room> start)
@@ -51,6 +51,17 @@ void ZOOrkEngine::run()
     }
 }
 
+bool isValueInVector(const std::vector<std::string> &vec, const std::string &value)
+{
+    for (const std::string &str : vec)
+    {
+        if (str == value)
+        {
+            return true; // Value found in the vector
+        }
+    }
+    return false; // Value not found in the vector
+}
 void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments)
 {
     std::string direction;
@@ -84,15 +95,49 @@ void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments)
     }
 
     Room *currentRoom = player->getCurrentRoom();
+
     auto passage = currentRoom->getPassage(direction);
-    player->setCurrentRoom(passage->getTo());
-    passage->enter();
+    if (passage != nullptr)
+    {
+        player->setCurrentRoom(passage->getTo());
+        passage->enter();
+    }
+    else
+    {
+        auto nullPassage = currentRoom->getNullPassage();
+        std::cout << nullPassage->getTo() << direction << std::endl;
+        ;
+    }
 }
 
 void ZOOrkEngine::handleLookCommand(std::vector<std::string> arguments)
 {
-    // To be implemented
-    std::cout << "This functionality is not yet enabled.\n";
+    Room *currentRoom = player->getCurrentRoom();
+    std::vector<Item *> items = currentRoom->getRoomItem("look");
+    std::string object;
+    if (!items.empty())
+    {
+        for (Item *item : items)
+        {
+            std::cout << "- " << item->getDescription() << std::endl;
+            object = item->getName();
+        }
+    }
+    else
+    {
+        std::cout << "There are no items in this room.\n";
+    }
+    // if (isValueInVector(arguments, object))
+    // {
+    //     for (Item *item : items)
+    //     {
+    //         std::cout << "- " << "hello" << std::endl;
+    //     }
+    // }
+    // else
+    // {
+    //     std::cout << arguments[1] << std::endl;
+    // }
 }
 
 void ZOOrkEngine::handleTakeCommand(std::vector<std::string> arguments)

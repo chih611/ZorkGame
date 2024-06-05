@@ -16,7 +16,7 @@ public:
 
     // void setFrom(Room*);
 
-    // Room* getFrom() const;
+    Room *getFrom() const;
 
     // void setTo(Room*);
 

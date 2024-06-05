@@ -9,7 +9,8 @@
 #include "GameObject.h"
 #include "NullCommand.h"
 
-class Item : public GameObject {
+class Item : public GameObject
+{
 public:
     Item(const std::string &, const std::string &);
 
@@ -22,5 +23,5 @@ public:
 protected:
     std::shared_ptr<Command> useCommand;
 };
-
-#endif //ZOORK_ITEM_H
+#include "Item.cpp"
+#endif // ZOORK_ITEM_H

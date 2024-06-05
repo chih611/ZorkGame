@@ -2,13 +2,16 @@
 #define ZOORK_NULLROOM_H
 
 #include "Room.h"
-#include "NullCommand.h"
+#include "RoomDefaultEnterCommand.h"
 
 class NullRoom : public Room
 {
 public:
-    // NullRoom(const std::string, const std::string, const NullCommand &);
-    NullRoom();
+    explicit NullRoom(const std::string &n,
+                      const std::string &d,
+                      std::shared_ptr<RoomDefaultEnterCommand> c) : Room(n,
+                                                                         d,
+                                                                         nullptr) {}
 };
 
 #include "NullRoom.cpp"

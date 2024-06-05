@@ -54,10 +54,10 @@ Passage::Passage(const std::string &n, const std::string &d, Room *from, Room *t
 //     fromRoom = r;
 // }
 
-// Room *Passage::getFrom() const
-// {
-//     return fromRoom;
-// }
+Room *Passage::getFrom() const
+{
+    return fromRoom;
+}
 
 // void Passage::setTo(Room *r)
 // {
