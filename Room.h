@@ -21,7 +21,7 @@ public:
 
     void addItem(Item *);
     //    void removeItem(const std::string&);
-    std::vector<Item *> getRoomItem(const std::string &);
+    std::vector<Item *> getRoomItem();
     //    Item* retrieveItem(const std::string&);
     //    void addCharacter(Character*);
     //    void removeCharacter(const std::string&);

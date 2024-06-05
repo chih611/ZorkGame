@@ -46,7 +46,7 @@ void ZOOrkEngine::run()
         }
         else
         {
-            std::cout << "I don't understand that command.\n";
+            std::cout << "I don't understand that command." << std::endl;
         }
     }
 }
@@ -113,49 +113,47 @@ void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments)
 void ZOOrkEngine::handleLookCommand(std::vector<std::string> arguments)
 {
     Room *currentRoom = player->getCurrentRoom();
-    std::vector<Item *> items = currentRoom->getRoomItem("look");
+    std::vector<Item *> items = currentRoom->getRoomItem();
     std::string object;
-    if (!items.empty())
+    bool nothingTolook = false;
+    for (Item *item : items)
     {
-        for (Item *item : items)
+        object = item->getName();
+        if (arguments.size() == 0 && !items.empty())
         {
-            std::cout << "- " << item->getDescription() << std::endl;
-            object = item->getName();
+            item->use();
+            nothingTolook = true;
+            break;
+        }
+        else if (object == arguments[0])
+        {
+            std::cout << item->getDescription() << std::endl;
+            nothingTolook = true;
         }
     }
-    else
+    if (!nothingTolook)
     {
-        std::cout << "There are no items in this room.\n";
+        std::cout << "I only understood you as far as wanting to look." << std::endl;
+        nothingTolook = false;
     }
-    // if (isValueInVector(arguments, object))
-    // {
-    //     for (Item *item : items)
-    //     {
-    //         std::cout << "- " << "hello" << std::endl;
-    //     }
-    // }
-    // else
-    // {
-    //     std::cout << arguments[1] << std::endl;
-    // }
 }
 
 void ZOOrkEngine::handleTakeCommand(std::vector<std::string> arguments)
 {
     // To be implemented
-    std::cout << "This functionality is not yet enabled.\n";
+    std::cout << "This functionality is not yet enabled." << std::endl;
 }
 
 void ZOOrkEngine::handleDropCommand(std::vector<std::string> arguments)
 {
     // To be implemented
-    std::cout << "This functionality is not yet enabled.\n";
+    std::cout << "This functionality is not yet enabled." << std::endl;
 }
 
 void ZOOrkEngine::handleQuitCommand(std::vector<std::string> arguments)
 {
     std::string input;
-    std::cout << "Are you sure you want to QUIT?\n> ";
+    std::cout << "Are you sure you want to QUIT?> " << std::endl;
     std::cin >> input;
     std::string quitStr = makeLowercase(input);
 

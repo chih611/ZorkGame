@@ -6,5 +6,5 @@
 
 void RoomDefaultEnterCommand::execute()
 {
-    std::cout << gameObject->getDescription() << "\n";
+    std::cout << gameObject->getDescription() << std::endl;
 }

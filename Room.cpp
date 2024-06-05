@@ -15,7 +15,7 @@ void Room::addItem(Item *item)
     items.push_back(item);
 }
 
-std::vector<Item *> Room::getRoomItem(const std::string &nameItem)
+std::vector<Item *> Room::getRoomItem()
 {
     return items;
 }

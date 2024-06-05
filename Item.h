@@ -1,13 +1,9 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #ifndef ZOORK_ITEM_H
 #define ZOORK_ITEM_H
 
 #include "Command.h"
 #include "GameObject.h"
-#include "NullCommand.h"
+#include "ItemsDefaultEnterCommand.h"
 
 class Item : public GameObject
 {
