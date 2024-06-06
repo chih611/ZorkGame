@@ -61,17 +61,6 @@ void ZOOrkEngine::run()
     }
 }
 
-bool isValueInVector(const std::vector<std::string> &vec, const std::string &value)
-{
-    for (const std::string &str : vec)
-    {
-        if (str == value)
-        {
-            return true; // Value found in the vector
-        }
-    }
-    return false; // Value not found in the vector
-}
 void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments)
 {
     std::string direction;
@@ -112,6 +101,18 @@ void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments)
         passage->enter();
         Room *passageRoom = player->getCurrentRoom();
         std::vector<Item *> items = passageRoom->getRoomItem();
+        std::vector<Character *> chars = passageRoom->getCharacter();
+        std::vector<Item *> inventory = player->getInventory();
+        for (Character *c : chars)
+        {
+            std::cout << "You are facing a " << c->getName() << std::endl;
+            string tag = c->getSpecificCharactersTags("steal");
+            if (tag == "steal")
+            {
+                c->steal(inventory, player);
+                player->removeItem(c->getStolenItem());
+            }
+        }
         for (Item *item : items)
         {
             std::cout << item->getDescription() << std::endl;

@@ -40,7 +40,9 @@ private:
     std::vector<Item *> inventory;
     static Player *playerInstance;
     Room *currentRoom;
-    Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),
+    Player() : Character("You",
+                         "You are a person, alike in dignity to any other, but uniquely you.",
+                         std::vector<string>{"brave"}),
                currentRoom(currentRoom) {}
 };
 #include "Player.cpp"

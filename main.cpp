@@ -13,13 +13,13 @@ int main()
     std::shared_ptr<Room> nonplace = std::make_shared<NullRoom>("nonplace",
                                                                 "You are standing in nonplace.", nullptr);
     std::shared_ptr<Room> living_room = std::make_shared<Room>("living-room",
-                                                               "You are standing in living room.", nullptr);
+                                                               "\033[1mLiving room\033[0m\nYou are standing in living room.", nullptr);
     std::shared_ptr<Room> bed_room = std::make_shared<Room>("bath-room",
                                                             "You are standing in bed room.", nullptr);
     std::shared_ptr<Room> kitchen = std::make_shared<Room>("kitchen",
                                                            "\033[1mKitchen\033[0m\nYou are standing in kitchen.", nullptr);
     std::shared_ptr<Room> dining_room = std::make_shared<Room>("dining-room",
-                                                               "You are standing in dining room", nullptr);
+                                                               "\033[1mDining room\033[0m\nYou are standing in dining room", nullptr);
     std::shared_ptr<Room> study_room = std::make_shared<Room>("study-room",
                                                               "You are standing in study room", nullptr);
     std::shared_ptr<Room> cellar = std::make_shared<Room>("cellar-room",
@@ -45,7 +45,6 @@ int main()
     GameObject *takeAbleObj = new GameObject("take", "You can take this item!");
     ItemsDefaultEnterCommand *takeAbleCmd = new ItemsDefaultEnterCommand(takeAbleObj, "");
     std::shared_ptr<ItemsDefaultEnterCommand> canTake(takeAbleCmd);
-
     Item *kitchen_items_knife = new Item("knife",
                                          "There is a sharpest knife in the word.", canTake);
     Item *kitchen_items_table = new Item("table",
@@ -53,9 +52,16 @@ int main()
     Item *foyer_items = new Item("nothing",
                                  "Oops!, there's nothing to look here");
 
+    Character *thief = new Character("thief",
+                                     "A lean and hungry gentleman sneaks into the room.\nHe eyes your belongings greedily.\nThe Thief deftly picks up the jeweled sword.\nBefore you can react, he slips away into the shadows.\n",
+                                     std::vector<string>{"steal", "attack"});
+
     kitchen->addItem(kitchen_items_knife);
     kitchen->addItem(kitchen_items_table);
     start_foyer->addItem(foyer_items);
+
+    living_room->addCharacter(thief);
+
     ZOOrkEngine zoork(start_foyer);
 
     zoork.run();

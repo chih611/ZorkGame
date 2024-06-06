@@ -33,14 +33,6 @@ void Room::addPassage(const std::string &direction, std::shared_ptr<Passage> p)
     passageMap[direction] = std::move(p);
 }
 
-// void Room::removePassage(const std::string &direction)
-// {
-//     if (passageMap.contains(direction))
-//     {
-//         passageMap.erase(direction);
-//     }
-// }
-
 std::shared_ptr<Passage> Room::getPassage(const std::string &direction)
 {
     auto it = passageMap.find(direction);
@@ -57,4 +49,14 @@ std::shared_ptr<Passage> Room::getPassage(const std::string &direction)
 std::shared_ptr<NullPassage> Room::getNullPassage()
 {
     return std::make_shared<NullPassage>("null-passage", "It is impossible to go ", nullptr, nullptr);
+}
+
+void Room::addCharacter(Character *c)
+{
+    characters.push_back(c);
+}
+
+std::vector<Character *> Room::getCharacter()
+{
+    return characters;
 }

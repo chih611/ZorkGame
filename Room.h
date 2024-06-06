@@ -20,11 +20,16 @@ public:
     Room(const std::string &, const std::string &, std::shared_ptr<RoomDefaultEnterCommand>);
 
     void addItem(Item *);
+
     std::vector<Item *> getRoomItem();
+
     void removeItem(Item *);
-    //    void addCharacter(Character*);
+
+    void addCharacter(Character *);
+
     //    void removeCharacter(const std::string&);
-    //    Character* getCharacter(const std::string&);
+
+    std::vector<Character *> getCharacter();
 
     void addPassage(const std::string &, std::shared_ptr<Passage>);
 
