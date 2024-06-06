@@ -7,8 +7,14 @@ ZOOrkEngine::ZOOrkEngine(std::shared_ptr<Room> start)
     player = Player::instance();
 
     player->setCurrentRoom(start.get());
-    Room *temp = player->getCurrentRoom();
-    temp->enter();
+    Room *currentRoom = player->getCurrentRoom();
+    currentRoom->enter();
+
+    std::vector<Item *> items = currentRoom->getRoomItem();
+    for (Item *item : items)
+    {
+        std::cout << item->getDescription() << std::endl;
+    }
 }
 
 void ZOOrkEngine::run()
@@ -93,20 +99,24 @@ void ZOOrkEngine::handleGoCommand(std::vector<std::string> arguments)
     {
         direction = arguments[0];
     }
-
+    player = Player::instance();
     Room *currentRoom = player->getCurrentRoom();
-
     auto passage = currentRoom->getPassage(direction);
+    player->setCurrentRoom(passage->getTo());
     if (passage != nullptr)
     {
-        player->setCurrentRoom(passage->getTo());
         passage->enter();
+        Room *passageRoom = player->getCurrentRoom();
+        std::vector<Item *> items = passageRoom->getRoomItem();
+        for (Item *item : items)
+        {
+            std::cout << item->getDescription() << std::endl;
+        }
     }
     else
     {
         auto nullPassage = currentRoom->getNullPassage();
         std::cout << nullPassage->getTo() << direction << std::endl;
-        ;
     }
 }
 
@@ -116,14 +126,14 @@ void ZOOrkEngine::handleLookCommand(std::vector<std::string> arguments)
     std::vector<Item *> items = currentRoom->getRoomItem();
     std::string object;
     bool nothingTolook = false;
+
     for (Item *item : items)
     {
         object = item->getName();
-        if (arguments.size() == 0 && !items.empty())
+        if (arguments.size() == 0)
         {
-            item->use();
+            std::cout << item->getDescription() << std::endl;
             nothingTolook = true;
-            break;
         }
         else if (object == arguments[0])
         {
@@ -140,14 +150,62 @@ void ZOOrkEngine::handleLookCommand(std::vector<std::string> arguments)
 
 void ZOOrkEngine::handleTakeCommand(std::vector<std::string> arguments)
 {
-    // To be implemented
-    std::cout << "This functionality is not yet enabled." << std::endl;
+    Room *currentRoom = player->getCurrentRoom();
+    std::vector<Item *> items = currentRoom->getRoomItem();
+
+    if (arguments.size() == 0)
+    {
+        std::cout << "What do you want to take?" << std::endl;
+    }
+    else
+    {
+        // Assuming the item name to take is the first argument
+        std::string itemNameToTake = arguments[0];
+
+        // Find the item in the current room's items
+        auto it = std::find_if(items.begin(), items.end(), [&](Item *item)
+                               { return item->getName() == itemNameToTake; });
+
+        if (it != items.end())
+        {
+            Item *itemToTake = *it;
+            // Logic to add the item to the player's inventory
+            player->addItem(itemToTake);
+            // Remove the item from the room
+            currentRoom->removeItem(itemToTake);
+            std::cout << "You have taken the " << itemNameToTake << "." << std::endl;
+        }
+        else
+        {
+            std::cout << "Item '" << itemNameToTake << "' not found in the current room." << std::endl;
+        }
+    }
 }
 
 void ZOOrkEngine::handleDropCommand(std::vector<std::string> arguments)
 {
-    // To be implemented
-    std::cout << "This functionality is not yet enabled." << std::endl;
+    Room *currentRoom = player->getCurrentRoom();
+    std::vector<Item *> items = currentRoom->getRoomItem();
+    std::vector<Item *> inventory = player->getInventory();
+    if (arguments.size() == 0)
+    {
+        std::cout << "What do you want to drop?" << std::endl;
+    }
+    std::string itemName = arguments[0];
+    auto it = std::find_if(inventory.begin(), inventory.end(), [&](Item *item)
+                           { return item->getName() == itemName; });
+
+    if (it != inventory.end())
+    {
+        Item *itemToDrop = *it;
+        player->removeItem(itemToDrop);
+        currentRoom->addItem(itemToDrop);
+        std::cout << "You have dropped the " << itemName << "." << std::endl;
+    }
+    else
+    {
+        std::cout << "You don't have a " << itemName << "." << std::endl;
+    }
 }
 
 void ZOOrkEngine::handleQuitCommand(std::vector<std::string> arguments)

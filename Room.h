@@ -20,9 +20,8 @@ public:
     Room(const std::string &, const std::string &, std::shared_ptr<RoomDefaultEnterCommand>);
 
     void addItem(Item *);
-    //    void removeItem(const std::string&);
     std::vector<Item *> getRoomItem();
-    //    Item* retrieveItem(const std::string&);
+    void removeItem(Item *);
     //    void addCharacter(Character*);
     //    void removeCharacter(const std::string&);
     //    Character* getCharacter(const std::string&);

@@ -26,11 +26,18 @@ public:
 
     Room *getCurrentRoom() const;
 
+    std::vector<Item *> getInventory() const;
+
+    void removeItem(Item *item);
+
     Player(const Player &) = delete;
 
     Player &operator=(const Player &) = delete;
 
+    void addItem(Item *);
+
 private:
+    std::vector<Item *> inventory;
     static Player *playerInstance;
     Room *currentRoom;
     Player() : Character("You", "You are a person, alike in dignity to any other, but uniquely you."),

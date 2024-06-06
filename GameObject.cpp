@@ -1,7 +1,3 @@
-//
-// Created by Richard Skarbez on 5/7/23.
-//
-
 #include "GameObject.h"
 
 GameObject::GameObject(const std::string &n, const std::string &d) : name(n), description(d) {}

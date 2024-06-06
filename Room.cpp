@@ -15,6 +15,14 @@ void Room::addItem(Item *item)
     items.push_back(item);
 }
 
+void Room::removeItem(Item *item)
+{
+    auto it = std::find(items.begin(), items.end(), item);
+    if (it != items.end())
+    {
+        items.erase(it);
+    }
+}
 std::vector<Item *> Room::getRoomItem()
 {
     return items;

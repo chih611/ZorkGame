@@ -17,7 +17,7 @@ int main()
     std::shared_ptr<Room> bed_room = std::make_shared<Room>("bath-room",
                                                             "You are standing in bed room.", nullptr);
     std::shared_ptr<Room> kitchen = std::make_shared<Room>("kitchen",
-                                                           "You are standing in kitchen", nullptr);
+                                                           "\033[1mKitchen\033[0m\nYou are standing in kitchen.", nullptr);
     std::shared_ptr<Room> dining_room = std::make_shared<Room>("dining-room",
                                                                "You are standing in dining room", nullptr);
     std::shared_ptr<Room> study_room = std::make_shared<Room>("study-room",
@@ -42,16 +42,16 @@ int main()
     Passage::createBasicPassage(study_room.get(), gallery.get(), "south", true);
     Passage::createBasicPassage(study_room.get(), attic.get(), "west", true);
 
-    GameObject *kitchenObject = new GameObject("Kitchen", "There is a knife on the table.");
-    RoomDefaultEnterCommand *lookAtTableCmd = new RoomDefaultEnterCommand(kitchenObject);
-    std::shared_ptr<Command> lookAtTableSharedPtr(lookAtTableCmd);
+    GameObject *takeAbleObj = new GameObject("take", "You can take this item!");
+    RoomDefaultEnterCommand *takeAbleCmd = new RoomDefaultEnterCommand(takeAbleObj);
+    std::shared_ptr<Command> canTake(takeAbleCmd);
 
     Item *kitchen_items_knife = new Item("knife",
-                                         "This is a sharpest knife in the word.", lookAtTableSharedPtr);
+                                         "There is a sharpest knife in the word.", canTake);
     Item *kitchen_items_table = new Item("table",
-                                         "This is a table.", lookAtTableSharedPtr);
+                                         "There is a table.", canTake);
     Item *foyer_items = new Item("nothing",
-                                 "Oop!, nothing to look here");
+                                 "Oops!, there's nothing to look here");
 
     kitchen->addItem(kitchen_items_knife);
     kitchen->addItem(kitchen_items_table);
