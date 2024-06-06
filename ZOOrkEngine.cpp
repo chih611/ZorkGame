@@ -152,33 +152,58 @@ void ZOOrkEngine::handleTakeCommand(std::vector<std::string> arguments)
 {
     Room *currentRoom = player->getCurrentRoom();
     std::vector<Item *> items = currentRoom->getRoomItem();
-
+    std::string object;
     if (arguments.size() == 0)
     {
         std::cout << "What do you want to take?" << std::endl;
     }
     else
     {
-        // Assuming the item name to take is the first argument
-        std::string itemNameToTake = arguments[0];
-
-        // Find the item in the current room's items
-        auto it = std::find_if(items.begin(), items.end(), [&](Item *item)
-                               { return item->getName() == itemNameToTake; });
-
-        if (it != items.end())
+        bool nothingTolook = false;
+        for (Item *item : items)
         {
-            Item *itemToTake = *it;
-            // Logic to add the item to the player's inventory
-            player->addItem(itemToTake);
-            // Remove the item from the room
-            currentRoom->removeItem(itemToTake);
-            std::cout << "You have taken the " << itemNameToTake << "." << std::endl;
+            object = item->getName();
+            if (object == arguments[0] && arguments.size() != 0)
+            {
+                if (item->getAttributeName() == "take")
+                {
+                    player->addItem(item);
+                    currentRoom->removeItem(item);
+                    std::cout << "You have taken the " << arguments[0] << "." << std::endl;
+                    nothingTolook = true;
+                }
+                else
+                {
+                    std::cout << item->getAttributeDescription() << std::endl;
+                    nothingTolook = true;
+                }
+            }
+            if (!nothingTolook)
+            {
+                std::cout << "Item '" << arguments[0] << "' not found in the current room." << std::endl;
+                nothingTolook = false;
+            }
         }
-        else
-        {
-            std::cout << "Item '" << itemNameToTake << "' not found in the current room." << std::endl;
-        }
+        // // Assuming the item name to take is the first argument
+        // std::string itemNameToTake = arguments[0];
+
+        // // Find the item in the current room's items
+        // auto it = std::find_if(items.begin(), items.end(), [&](Item *item)
+        //                        { return item->getName() == itemNameToTake && item->getAttribute() == "take"; });
+
+        // if (it != items.end())
+        // {
+        //     Item *itemToTake = *it;
+        //     // Logic to add the item to the player's inventory
+        //     player->addItem(itemToTake);
+        //     // Remove the item from the room
+        //     currentRoom->removeItem(itemToTake);
+        //     std::cout << "You have taken the " << itemNameToTake << "." << std::endl;
+        // }
+        // else
+        // {
+        //     std::cout << "Item '" << itemNameToTake << "' not found in the current room." << std::endl;
+        // }
     }
 }
 

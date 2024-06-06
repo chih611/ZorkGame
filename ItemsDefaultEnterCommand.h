@@ -13,6 +13,10 @@ public:
 
     void execute() override;
 
+    std::string getNameObj();
+
+    std::string getDescObj();
+
 private:
     std::string description;
 };

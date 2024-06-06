@@ -1,4 +1,4 @@
-#include "RoomDefaultEnterCommand.h"
+// #include "RoomDefaultEnterCommand.h"
 #include "Passage.h"
 #include "Player.h"
 #include "Room.h"
@@ -43,8 +43,8 @@ int main()
     Passage::createBasicPassage(study_room.get(), attic.get(), "west", true);
 
     GameObject *takeAbleObj = new GameObject("take", "You can take this item!");
-    RoomDefaultEnterCommand *takeAbleCmd = new RoomDefaultEnterCommand(takeAbleObj);
-    std::shared_ptr<Command> canTake(takeAbleCmd);
+    ItemsDefaultEnterCommand *takeAbleCmd = new ItemsDefaultEnterCommand(takeAbleObj, "");
+    std::shared_ptr<ItemsDefaultEnterCommand> canTake(takeAbleCmd);
 
     Item *kitchen_items_knife = new Item("knife",
                                          "There is a sharpest knife in the word.", canTake);
