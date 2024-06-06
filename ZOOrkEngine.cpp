@@ -46,6 +46,10 @@ void ZOOrkEngine::run()
         {
             handleDropCommand(arguments);
         }
+        else if (command == "inventory" || (command == "i"))
+        {
+            handleInventoryCommand(arguments);
+        }
         else if (command == "quit")
         {
             handleQuitCommand(arguments);
@@ -184,29 +188,27 @@ void ZOOrkEngine::handleTakeCommand(std::vector<std::string> arguments)
                 nothingTolook = false;
             }
         }
-        // // Assuming the item name to take is the first argument
-        // std::string itemNameToTake = arguments[0];
-
-        // // Find the item in the current room's items
-        // auto it = std::find_if(items.begin(), items.end(), [&](Item *item)
-        //                        { return item->getName() == itemNameToTake && item->getAttribute() == "take"; });
-
-        // if (it != items.end())
-        // {
-        //     Item *itemToTake = *it;
-        //     // Logic to add the item to the player's inventory
-        //     player->addItem(itemToTake);
-        //     // Remove the item from the room
-        //     currentRoom->removeItem(itemToTake);
-        //     std::cout << "You have taken the " << itemNameToTake << "." << std::endl;
-        // }
-        // else
-        // {
-        //     std::cout << "Item '" << itemNameToTake << "' not found in the current room." << std::endl;
-        // }
     }
 }
 
+void ZOOrkEngine::handleInventoryCommand(std::vector<std::string> arguments)
+{
+    Room *currentRoom = player->getCurrentRoom();
+    std::vector<Item *> items = currentRoom->getRoomItem();
+    std::vector<Item *> inventory = player->getInventory();
+
+    if (inventory.size() == 0)
+    {
+        std::cout << "You are empty handed." << std::endl;
+    }
+    else
+    {
+        for (Item *content : inventory)
+        {
+            std::cout << content->getName() << std::endl;
+        }
+    }
+}
 void ZOOrkEngine::handleDropCommand(std::vector<std::string> arguments)
 {
     Room *currentRoom = player->getCurrentRoom();
